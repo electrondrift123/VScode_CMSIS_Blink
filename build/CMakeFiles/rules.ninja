@@ -25,7 +25,7 @@ rule C_COMPILER__STM32F411CE_BLINK_unscanned_Debug
 # Rule for linking C executable.
 
 rule C_EXECUTABLE_LINKER__STM32F411CE_BLINK_Debug
-  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $FLAGS -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -T "C:/Users/User/Documents/ARM_Cotex_M_Projects/STM32F411CE_Blink/STM32F411XX_FLASH.ld" --specs=nano.specs -Wl,-Map=STM32F411CE_BLINK.map -Wl,--gc-sections -Wl,--start-group -lc -lm -Wl,--end-group -Wl,--print-memory-usage $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~2\GNUARM~1\102021~1.10\bin\AR19DD~1.EXE $FLAGS -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -T "C:/Users/User/Documents/ARM_Cotex_M_Projects/STM32F411CE_Blink/ld/STM32F411XX_FLASH.ld" --specs=nano.specs -Wl,-Map=STM32F411CE_BLINK.map -Wl,--gc-sections -Wl,--start-group -lc -lm -Wl,--end-group -Wl,--print-memory-usage $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
 
