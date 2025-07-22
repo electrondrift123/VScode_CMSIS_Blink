@@ -22,7 +22,7 @@ endif()
 set(CMAKE_PROJECT_NAME STM32F411CE_BLINK)
 
 # Include toolchain file
-include("cmake/gcc-arm-none-eabi.cmake")
+include("cmake/arm-none-eabi-gcc.cmake")
 
 # Enable compile command to ease indexing with e.g. clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
@@ -38,7 +38,7 @@ enable_language(C ASM)
 add_executable(${CMAKE_PROJECT_NAME})
 
 # Add STM32CubeMX generated sources
-add_subdirectory(cmake/stm32cubemx)
+# add_subdirectory(cmake/stm32cubemx)
 
 # Link directories setup
 target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
@@ -48,14 +48,18 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 # Add sources to executable
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
-    src
+    src/main.c
 )
 
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
     src
+    Drivers/CMSIS/Device/ST/STM32F4xx/include
+    Drivers/CMSIS/Include
 )
+
+
 
 
 # Post-build: create .bin and .hex files for DFU or STM32CubeProgrammer

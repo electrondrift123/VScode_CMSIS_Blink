@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/User/Documents/ARM_Cotex_M_Projects/STM32F411CE_Blink/build",
+  "command": "C:\\PROGRA~2\\GNUARM~1\\102021~1.10\\bin\\AR19DD~1.EXE -IC:/Users/User/Documents/ARM_Cotex_M_Projects/STM32F411CE_Blink/src -IC:/Users/User/Documents/ARM_Cotex_M_Projects/STM32F411CE_Blink/Drivers/CMSIS/Device/ST/STM32F4xx/include -IC:/Users/User/Documents/ARM_Cotex_M_Projects/STM32F411CE_Blink/Drivers/CMSIS/Include  -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11 -o CMakeFiles\\STM32F411CE_BLINK.dir\\src\\main.c.obj -c C:\\Users\\User\\Documents\\ARM_Cotex_M_Projects\\STM32F411CE_Blink\\src\\main.c",
+  "file": "C:\\Users\\User\\Documents\\ARM_Cotex_M_Projects\\STM32F411CE_Blink\\src\\main.c",
+  "output": "CMakeFiles\\STM32F411CE_BLINK.dir\\src\\main.c.obj"
+}
+]
